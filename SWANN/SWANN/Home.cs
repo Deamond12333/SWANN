@@ -15,6 +15,13 @@ namespace SWANN
         public Home()
         {
             InitializeComponent();
+            label1.Text = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SWANN swann = new SWANN();
+            label1.Text = swann.parseFunction(textBox1.Text, 2.0, 0).ToString();
         }
     }
 }
